@@ -23,7 +23,7 @@ func getMapBody(bodyByte []byte) (map[string]interface{}, error) {
 func grabHttp(url string) ([]byte, error) {
 
 	ipClient := http.Client{
-		Timeout: time.Second * 2, // Maximum of 2 secs
+		Timeout: time.Second * 5, // Maximum of 2 secs
 	}
 
 	req, err := http.NewRequest(http.MethodGet, url, nil)
